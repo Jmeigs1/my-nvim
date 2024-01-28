@@ -1,5 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
+require("toggleterm-config")
 
 local function set_current_directory_as_titlestring()
   -- Get the first level directory of the current buffer's file path

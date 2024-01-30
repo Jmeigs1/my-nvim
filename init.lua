@@ -1,12 +1,12 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("toggleterm-config")
+require("telescope-delta")
 
 local function set_current_directory_as_titlestring()
   -- Get the first level directory of the current buffer's file path
   local current_directory = vim.fn.fnamemodify(vim.loop.cwd(), ":p:h:t")
 
-  -- print("test: " .. current_directory)
   -- Set the current directory as the titlestring
   vim.opt.titlestring = current_directory .. " %< %F %="
 end

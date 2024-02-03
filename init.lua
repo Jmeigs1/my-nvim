@@ -2,6 +2,7 @@
 require("config.lazy")
 require("toggleterm-config")
 require("telescope-delta")
+require("templ-format")
 
 local function set_current_directory_as_titlestring()
   -- Get the first level directory of the current buffer's file path
@@ -30,4 +31,4 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 
 -- Templ
 vim.filetype.add({ extension = { templ = "templ" } })
-vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = vim.lsp.buf.format })
+-- vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = vim.lsp.buf.format })

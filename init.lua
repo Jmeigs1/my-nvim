@@ -8,7 +8,7 @@ require("uuidgen")
 
 local function set_current_directory_as_titlestring()
   -- Get the first level directory of the current buffer's file path
-  local current_directory = vim.fn.fnamemodify(vim.loop.cwd(), ":p:h:t")
+  local current_directory = vim.fn.fnamemodify(vim.loop.cwd() or "", ":p:h:t")
 
   -- Set the current directory as the titlestring
   vim.opt.titlestring = current_directory .. " %< %F %="

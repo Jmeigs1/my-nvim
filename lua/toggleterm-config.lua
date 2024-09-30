@@ -38,15 +38,12 @@ function _PYTHON_TOGGLE()
   python:toggle()
 end
 
-require("which-key").register({
-  t = {
-    name = "Terminal",
-    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" }, -- Node Terminal
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" }, -- Python Terminal
-    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" }, -- Horizontal Terminal,
-
-    h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" }, -- Horizontal Terminal,
-    v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" }, -- Vertical Terminal
-    s = { "<cmd>TermSelect<cr>", "Select Terminal" }, -- Vertical Terminal
-  },
-}, { prefix = "<leader>" })
+require("which-key").add({
+  { "<leader>t", group = "Terminal" },
+  { "<leader>tn", "<cmd>lua _NODE_TOGGLE()<cr>", desc = "Node" },
+  { "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<cr>", desc = "Python" },
+  { "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", desc = "Float" },
+  { "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "Horizontal" },
+  { "<leader>tv", "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "Vertical" },
+  { "<leader>ts", "<cmd>TermSelect<cr>", desc = "Select Terminal" },
+})

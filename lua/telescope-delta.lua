@@ -18,14 +18,12 @@ local delta_git_status = function(opts)
   builtin.git_status(opts)
 end
 
-require("which-key").register({
-  g = {
-    name = "git",
-    s = {
-      function()
-        delta_git_status()
-      end,
-      "Status",
-    },
+require("which-key").add({
+  {
+    "<leader>gs",
+    function()
+      delta_git_status()
+    end,
+    desc = "Status",
   },
-}, { prefix = "<leader>" })
+})

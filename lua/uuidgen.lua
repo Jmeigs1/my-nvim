@@ -1,7 +1,3 @@
-local previewers = require("telescope.previewers")
-local builtin = require("telescope.builtin")
-local random = math.random
-
 function generate_uuid()
   math.randomseed(os.time())
   local random = math.random
@@ -23,13 +19,12 @@ local insert_uuid = function()
   vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, { uuid })
 end
 
-require("which-key").register({
-  c = {
-    u = {
-      function()
-        insert_uuid()
-      end,
-      "Insert UUID",
-    },
+require("which-key").add({
+  {
+    "<leader>cu",
+    function()
+      insert_uuid()
+    end,
+    desc = "Insert UUID",
   },
-}, { prefix = "<leader>" })
+})

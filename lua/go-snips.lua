@@ -8,16 +8,14 @@ local func = ls.function_node
 local choice = ls.choice_node
 local dynamicn = ls.dynamic_node
 
-ls.add_snippets(nil, {
-  go = {
-    snip({
-      trig = "ifer",
-      namr = "If Err",
-      dscr = "If Err Stub",
-    }, {
-      text({ "if err != nil {", "\treturn " }),
-      insert(1, "err"),
-      text({ "", "}" }),
-    }),
-  },
+ls.add_snippets("go", {
+  snip({
+    trig = "ifer",
+    name = "If Err",
+    desc = "If Err Stub",
+  }, {
+    text({ "if err != nil {", "\treturn " }),
+    insert(1, "err"),
+    text({ "", "}" }),
+  }),
 })

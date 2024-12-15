@@ -41,5 +41,3 @@ require("conform").formatters.shfmt = {
   command = "shfmt",
   args = { "-i", "2", "-filename", "$FILENAME" },
 }
-
-snacks.scroll.disable()

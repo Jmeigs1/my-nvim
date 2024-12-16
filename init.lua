@@ -5,7 +5,6 @@ require("telescope-delta")
 require("templ-format")
 require("go-snips")
 require("uuidgen")
-local snacks = require("snacks")
 
 local function set_current_directory_as_titlestring()
   -- Get the first level directory of the current buffer's file path

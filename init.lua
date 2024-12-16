@@ -1,7 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("toggleterm-config")
-require("telescope-delta")
 require("templ-format")
 require("go-snips")
 require("uuidgen")

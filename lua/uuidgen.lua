@@ -1,4 +1,4 @@
-function generate_uuid()
+local function generate_uuid()
   math.randomseed(os.time())
   local random = math.random
   local template = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

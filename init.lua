@@ -2,7 +2,7 @@
 require("config.lazy")
 require("toggleterm-config")
 require("templ-format")
-require("go-snips")
+-- require("go-snips")
 require("uuidgen")
 
 local function set_current_directory_as_titlestring()

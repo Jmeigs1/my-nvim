@@ -1,6 +1,6 @@
-return {
+local config = {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ui = {
         border = "rounded",
@@ -11,3 +11,6 @@ return {
     },
   },
 }
+
+return config
+-- return {}

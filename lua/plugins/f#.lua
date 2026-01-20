@@ -3,5 +3,5 @@ local config = {
   event = "LazyFile",
 }
 
-return config
--- return {}
+-- return config
+return {}
